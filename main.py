@@ -1,47 +1,79 @@
 #!/usr/bin/env python3
-"""make.fun entry for the "Sum up 18 November's world news in one image" bounty.
+"""Ship the 18 November 2026 news poster to the grader's output folder.
 
-The program writes the day's news poster to /output/entry.png. It needs no
-network and no third-party packages: the poster is shipped in this repository
-as entry.png and copied byte for byte, so two runs write identical bytes.
+The entry is the picture itself: this program validates the shipped PNG and
+places it at /output/entry.png. Nothing here reaches the network, imports a
+third-party package, or reads the clock, so repeated runs are byte-identical.
 """
-import os
+from __future__ import annotations
+
+import struct
 import sys
 from pathlib import Path
 
-ENTRY_NAME = "entry.png"
-OUTPUT_DIR = Path("/output")
-REPO_DIR = Path(__file__).resolve().parent
-PNG_SIGNATURE = b"\x89PNG\r\n\x1a\n"
-MAX_BYTES = 1_048_576
+POSTER = "entry.png"
+TARGET_DIR = Path("/output")
+SIDE_LIMIT = 1_048_576
+MAGIC = b"\x89PNG\r\n\x1a\n"
 
 
-def check_payload(payload: bytes) -> str:
-    """Return an error message when the poster breaks the gate, else ''."""
-    if not payload.startswith(PNG_SIGNATURE):
-        return "the poster is not a PNG file"
-    if len(payload) > MAX_BYTES:
-        return f"the poster is {len(payload)} bytes, over the 1 MiB cap"
-    return ""
+class PosterError(Exception):
+    """Raised when the shipped picture cannot be handed to the grader."""
 
 
-def main() -> int:
-    """Copy the poster from the repository into the output directory."""
-    source = REPO_DIR / ENTRY_NAME
-    if not source.is_file():
-        print(f"error: {source} is missing", file=sys.stderr)
-        return 2
+def png_geometry(blob: bytes) -> tuple[int, int]:
+    """Read width and height out of an IHDR chunk without any library."""
+    if not blob.startswith(MAGIC):
+        raise PosterError("the shipped file is not a PNG (no signature)")
+    if len(blob) < 33 or blob[12:16] != b"IHDR":
+        raise PosterError("the PNG carries no IHDR header")
+    width, height = struct.unpack(">II", blob[16:24])
+    if width == 0 or height == 0:
+        raise PosterError("the PNG reports a zero side")
+    return width, height
 
-    payload = source.read_bytes()
-    problem = check_payload(payload)
-    if problem:
-        print(f"error: {problem}", file=sys.stderr)
-        return 2
-    OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
-    (OUTPUT_DIR / ENTRY_NAME).write_bytes(payload)
-    print(f"wrote {OUTPUT_DIR / ENTRY_NAME} ({len(payload)} bytes)")
+
+def validate(blob: bytes) -> tuple[int, int]:
+    """Return the picture's geometry once every intake rule is satisfied."""
+    if len(blob) > SIDE_LIMIT:
+        raise PosterError(f"the picture is {len(blob)} bytes, past the 1 MiB intake cap")
+    width, height = png_geometry(blob)
+    if width != height:
+        raise PosterError(f"the picture is {width}x{height}; this bounty wants a square")
+    return width, height
+
+
+def locate() -> Path:
+    """The poster travels beside this program, so resolve it from __file__."""
+    here = Path(__file__).resolve().parent
+    candidate = here / POSTER
+    if not candidate.is_file():
+        raise PosterError(f"no {POSTER} next to the program ({here})")
+    return candidate
+
+
+def deliver(source: Path) -> Path:
+    """Copy the picture to the output folder the grader mounts and return it."""
+    blob = source.read_bytes()
+    width, height = validate(blob)
+    TARGET_DIR.mkdir(parents=True, exist_ok=True)
+    destination = TARGET_DIR / POSTER
+    destination.write_bytes(blob)
+    print(f"{destination}: {width}x{height}, {len(blob)} bytes")
+    return destination
+
+
+def run() -> int:
+    try:
+        deliver(locate())
+    except PosterError as complaint:
+        print(f"poster not delivered: {complaint}", file=sys.stderr)
+        return 1
+    except OSError as complaint:
+        print(f"poster not delivered: {complaint}", file=sys.stderr)
+        return 1
     return 0
 
 
 if __name__ == "__main__":
-    raise SystemExit(main())
+    sys.exit(run())
