@@ -1,36 +1,37 @@
 # News sources — 18 November 2026
 
-Every card on the poster comes from a report published on 17 or 18 November 2026
-(web was read at 2026-11-18 01:58 UTC, so most of the day's own reporting was still
-breaking). Nothing on the poster is invented: each line below points at the article it
-was taken from.
+Every card on the poster comes from a report **published on 18 November 2026** (UTC).
+The web was read at 2026-11-18 03:40 UTC, so these are the stories of the day itself,
+not the evening before. Nothing on the poster is invented: each card is one row below.
 
-| # | Card label on the poster | Headline of the source report | Outlet / date | URL |
+| # | Card on the poster | Report the card was taken from | Outlet / published (UTC) | Link |
 |---|---|---|---|---|
-| 1 | Crimean Bridge Span Destroyed | Ukraine cripples Crimean road bridge in blow to Putin before meeting with Xi and Trump | Reuters, 17 Nov 2026 | https://www.reuters.com/world/europe/ukraine-strikes-crimean-bridge-second-day-russia-pounds-kyiv-bridges-2026-11-17/ |
-| 2 | Trump Opens Asia Summit Run | Trump meets key US regional allies in Manila ahead of China visit | Reuters, 17 Nov 2026 | https://www.reuters.com/world/china/trump-kick-off-asia-trip-with-quad-talks-manila-ahead-china-visit-2026-11-17/ |
-| 3 | US Strikes Qeshm, Gulf Hit | Kuwait reports drone attacks as Iran, US trade attacks on Qeshm and Bahrain | Al Jazeera, 17 Nov 2026 | https://www.aljazeera.com/news/2026/11/17/kuwait-reports-drone-attacks-as-iran-us-trade-attacks-on-qeshm-and-bahrain |
-| 4 | Truce On Brink of Collapse | Board of Peace warns Gaza ceasefire faces imminent collapse without action | Al Jazeera, 18 Nov 2026 | https://www.aljazeera.com/news/2026/11/18/board-of-peace-warns-gaza-ceasefire-faces-imminent-collapse-without-action |
-| 5 | Siberia Crash Kills All 19 | Russian military plane crash in Siberia kills 19 | Al Jazeera, 17 Nov 2026 (also Reuters, 17 Nov) | https://www.aljazeera.com/news/2026/11/17/russian-military-plane-crash-in-siberia-kills-19 |
-| 6 | US Loses Measles-Free Status | US officially loses measles-free status after 26 years amid outbreak | Al Jazeera, 17 Nov 2026 | https://www.aljazeera.com/news/2026/11/17/us-officially-loses-measles-free-status-after-26-years-amid-outbreak |
-| 7 | Climate Draft Splits COP31 | Tensions rise over draft climate deal at COP31 | Al Jazeera, 17 Nov 2026 | https://www.aljazeera.com/news/2026/11/17/tensions-rise-over-draft-climate-deal-at-cop31 |
-| 8 | Nvidia Beats, Huang Stays Out | Nvidia says it won't reinstate Huang as firm reports bumper results | BBC News, 17-18 Nov 2026 | https://www.bbc.com/news/world |
+| 1 | Kerch Bridge Hit | How Ukraine struck the Kerch bridge, a symbol of Putin's rule | The Guardian · 18 Nov 02:30 | https://news.google.com/rss/articles/CBMipwFBVV95cUxQUmwweVVNNGxibWplYWRqN3FyS1A0MWM5OFRhTTlOR2F0MnM5aDNOOUFOeGhJSGpqc0t0TzBjcF9BaWxfZnpMQkhHeWxMeXJ1S3cxMkZVZGFyS21FXzRHVjhBaDZjZTd0R2NxaTY1aW5JOUVJTlJjalRGTmIzNGdnZ2xzc1EyZU5WNm5McF80Y2tPWkI3SlFQTVpWeE1MMVpVRFRsUTl0MA?oc=5 — a Google News redirect to the Guardian article, which the Guardian's own feed carries no static slug for |
+| 2 | Iran War Spreads | Iran war live: Kuwait says intercepting 'hostile' drone attacks | Al Jazeera · 18 Nov 00:00 | https://www.aljazeera.com/news/liveblog/2026/11/18/iran-war-live-kuwait-says-intercepting-hostile-drone-attacks |
+| 3 | Nvidia Says No | Nvidia says it won't reinstate Huang as firm reports bumper results | BBC News · 18 Nov 01:18 | https://www.bbc.co.uk/news/articles/cm2kl50vkwkdo |
+| 4 | Gaza On The Edge | Board of Peace warns Gaza ceasefire faces imminent collapse without action | Al Jazeera · 18 Nov 01:07 | https://www.aljazeera.com/news/2026/11/18/board-of-peace-warns-gaza-ceasefire-faces-imminent-collapse-without-action |
+| 5 | Congo Peace Falters | DR Congo's rival peace efforts fail to halt violence in the east | Al Jazeera · 18 Nov 00:57 | https://www.aljazeera.com/news/2026/11/18/dr-congos-rival-peace-efforts-fail-to-halt-violence-in-the-east |
+| 6 | Knesset Shake-Up | Eisenkot ally elected Knesset speaker with Arab bloc's backing | Al Jazeera · 18 Nov 00:47 | https://www.aljazeera.com/video/newsfeed/2026/11/18/eisenkot-ally-elected-knesset-speaker-with-arab-blocs-backing |
+| 7 | Plane Sabotaged | Prosecutors allege man 'destroyed' US military plane at Irish airport | Al Jazeera · 18 Nov 01:32 | https://www.aljazeera.com/news/2026/11/18/prosecutors-allege-man-destroyed-us-military-plane-at-irish-airport |
+| 8 | Trump To Shenzhen | What is Trump hoping to achieve at APEC meeting in China? | Al Jazeera · 18 Nov 01:33 | https://www.aljazeera.com/news/2026/11/18/what-is-trump-hoping-to-achieve-at-apec-meeting-in-china |
 
-## Supporting details used in the labels
+Every link above answered HTTP 200 when it was read for this poster. Each card carries the
+outlet it came from, and the poster's footer repeats the sourcing rule.
 
-- Card 1: Ukrainian drones and missiles destroyed the central road section of the Kerch
-  Strait bridge on Tuesday 17 November, two days before Putin meets the US and Chinese leaders.
-- Card 2: Trump opened his Asia trip with ASEAN and Quad talks in Manila before his China visit
-  and the summits with Xi Jinping and Vladimir Putin.
-- Card 3: Kuwait's army reported hostile drone attacks and air-defence interceptions while the
-  US and Iran traded strikes; a tanker was ablaze in the Strait of Hormuz.
-- Card 4: The US-backed Board of Peace, in its first annual report to the UN Security Council,
-  warned the year-old Israel-Hamas truce could collapse without action on the 2025 deal.
-- Card 5: A Russian military transport aircraft crashed in the Kemerovo region of Siberia,
-  killing all 19 aboard; the defence ministry blamed a technical malfunction.
-- Card 6: PAHO declared measles endemic in the US after 12 months of continuous circulation —
-  the first loss of elimination status since 2000; states have reported over 5,400 cases.
-- Card 7: A draft "cover decision" published by co-host Australia at COP31 in Antalya,
-  including a fossil-fuel phase-out, split delegates.
-- Card 8: Nvidia reported strong quarterly results after the exit of Jensen Huang and said it
-  would not reinstate him.
+## What the eight cards say, in one line each
+
+1. Ukraine's strike on the Kerch bridge, and how it was carried out — the bridge is the symbol
+   of Putin's rule over the occupied peninsula.
+2. Kuwait says it intercepted hostile drones as the Iran–US exchange widens across the Gulf.
+3. Nvidia reported faster growth and said Jensen Huang will not return as chief executive,
+   despite pressure from Silicon Valley.
+4. The Board of Peace warned that the Gaza ceasefire faces imminent collapse without action.
+5. Rival peace initiatives failed to stop the violence in eastern DR Congo.
+6. An ally of Eisenkot was elected Knesset speaker with backing from the Arab bloc.
+7. Prosecutors say a man destroyed a US military aircraft at an airport in Ireland.
+8. Trump travels to the APEC summit in Shenzhen; the White House sets out what it wants.
+
+## How the poster is made
+
+`main.py` copies `entry.png` (this repository's poster) to `/output/entry.png`, byte for byte:
+it needs no network and no third-party package, and two runs write identical bytes.
